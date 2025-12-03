@@ -14,7 +14,6 @@ public class Lab307 {
                     price = Integer.parseInt(JOptionPane.showInputDialog("Invalid price!!\nInput price [press 0 to stop]:"));
                 }
             }
-
             DecimalFormat frm = new DecimalFormat("#,###.0");
             JOptionPane.showMessageDialog(null,"Total price is " + frm.format(sum) + " baht.");
         }
