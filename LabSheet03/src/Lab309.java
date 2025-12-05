@@ -8,7 +8,13 @@ public class Lab309 {
 
         if (menu == JOptionPane.YES_OPTION) {
             while (true) {
-                int number = Integer.parseInt(JOptionPane.showInputDialog("Yakitori Menu\n" + "[1] Chicken Wing 99 B.\n" + "[2] Pork with Leek 89 B.\n" + "[3] Beef Tongue 109 B.\n" + "[0] Exit and Calculate\n" + "Enter menu number:"));
+                int number = Integer.parseInt(JOptionPane.showInputDialog("""
+                        Yakitori Menu
+                        [1] Chicken Wing 99 B.
+                        [2] Pork with Leek 89 B.
+                        [3] Beef Tongue 109 B.
+                        [0] Exit and Calculate
+                        Enter menu number:"""));
 
                 if (number == 0) break;
 
@@ -24,16 +30,19 @@ public class Lab309 {
                         price = 109;
                         break;
                     default:
-                        number = Integer.parseInt(JOptionPane.showInputDialog(null, "Yakitori Menu\n" + "[1] Chicken Wing 99 B.\n" + "[2] Pork with Leek 89 B.\n" + "[3] Beef Tongue 109 B.\n" + "[0] Exit and Calculate\n" + "Enter menu number:"));
+                        JOptionPane.showInputDialog(null, """
+                                Yakitori Menu
+                                [1] Chicken Wing 99 B.
+                                [2] Pork with Leek 89 B.
+                                [3] Beef Tongue 109 B.
+                                [0] Exit and Calculate
+                                Enter menu number:""");
                 }
                 sum += price;
             }
             JOptionPane.showConfirmDialog(null, "Do you want to order from the menu?", "Menu", JOptionPane.YES_NO_OPTION);
 
-            if (menu == JOptionPane.YES_OPTION) {
-                JOptionPane.showMessageDialog(null, "Total price is " + sum + " Baht.");
-            } else {
-            }
+            JOptionPane.showMessageDialog(null, "Total price is " + sum + " Baht.");
         }
     }
 }
