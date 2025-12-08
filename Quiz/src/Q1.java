@@ -11,19 +11,14 @@ public class Q1 {
         int people_buffet = 300;
         double net = 0.07;
 
-        int sum = 0;
-        int amount = 0;
-
-        double price_buffet = people * people_buffet - (people * people_buffet * net);
         DecimalFormat frm = new DecimalFormat("#,###.00");
-
-        int price = 0;
 
         int buffet = JOptionPane.showConfirmDialog(
                 null, "Would you like to buffet?",
                 "Buffet", JOptionPane.YES_NO_OPTION);
 
         if (buffet == JOptionPane.YES_OPTION) {
+            double price_buffet = people * people_buffet - (people * people_buffet * net);
             JOptionPane.showMessageDialog(null,
                     "Total price buffet is " + frm.format(price_buffet) + " baht.");
             return;
@@ -35,7 +30,8 @@ public class Q1 {
 
         if (menu == JOptionPane.YES_OPTION) {
 
-            int total = 0;
+            int sum = 0;
+
             while (true) {
                 int number = Integer.parseInt(JOptionPane.showInputDialog("""
                         [1] Bacon 40 B.
@@ -47,6 +43,8 @@ public class Q1 {
 
                 if (number == 0) break;
 
+                int price = 0;
+
                 if (number == 1) {
                     price = 40;
                 } else if (number == 2) {
@@ -57,6 +55,7 @@ public class Q1 {
                     price = 25;
                 } else {
                     JOptionPane.showInputDialog(null, """
+                            Invalid menu number!!!
                             [1] Bacon 40 B.
                             [2] Streaky pork 40 B.
                             [3] Egg 15 B.
@@ -65,10 +64,12 @@ public class Q1 {
                             Enter menu number:""");
                     continue;
                 }
-                amount = Integer.parseInt(JOptionPane.showInputDialog(null, "How many do you want?"));
+                int amount = Integer.parseInt(JOptionPane.showInputDialog("How many do you want?"));
                 sum += price * amount;
+
             }
-            JOptionPane.showMessageDialog(null, "Total price " + frm.format(sum) + " baht.");
+            double total = sum - (sum * net);
+            JOptionPane.showMessageDialog(null, "Total price " + frm.format(total) + " baht.");
         }
     }
 }
