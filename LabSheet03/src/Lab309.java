@@ -1,10 +1,13 @@
 import javax.swing.*;
+import java.text.DecimalFormat;
 
 public class Lab309 {
     public static void main(String[] args) {
         int sum = 0;
         int menu = JOptionPane.showConfirmDialog(null, "Do you want to order from the menu?", "Menu",
                 JOptionPane.YES_NO_OPTION);
+
+        double net = 0.07;
 
         if (menu == JOptionPane.YES_OPTION) {
             while (true) {
@@ -42,7 +45,11 @@ public class Lab309 {
             }
             JOptionPane.showConfirmDialog(null, "Do you want to order from the menu?", "Menu", JOptionPane.YES_NO_OPTION);
 
-            JOptionPane.showMessageDialog(null, "Total price is " + sum + " Baht.");
+            double total_price = sum + (sum * net);
+            
+            DecimalFormat frm = new DecimalFormat("#,###.00");
+
+            JOptionPane.showMessageDialog(null, "Total price is " + frm.format(total_price) + " Baht.");
         }
     }
 }

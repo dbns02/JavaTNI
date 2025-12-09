@@ -8,8 +8,12 @@ public class Q1 {
     static void main() {
         int people = Integer.parseInt(JOptionPane.showInputDialog("How many customer?"));
 
+        //เก็บการตั้งค่าไว้ค่าไว้ด้านนอก
         int people_buffet = 300;
         double net = 0.07;
+
+        int sum = 0;
+        int price = 0;
 
         DecimalFormat frm = new DecimalFormat("#,###.00");
 
@@ -30,8 +34,6 @@ public class Q1 {
 
         if (menu == JOptionPane.YES_OPTION) {
 
-            int sum = 0;
-
             while (true) {
                 int number = Integer.parseInt(JOptionPane.showInputDialog("""
                         [1] Bacon 40 B.
@@ -42,8 +44,6 @@ public class Q1 {
                         Enter menu number:"""));
 
                 if (number == 0) break;
-
-                int price = 0;
 
                 if (number == 1) {
                     price = 40;
@@ -68,7 +68,7 @@ public class Q1 {
                 sum += price * amount;
 
             }
-            double total = sum - (sum * net);
+            double total = sum + (sum * net);
             JOptionPane.showMessageDialog(null, "Total price " + frm.format(total) + " baht.");
         }
     }
