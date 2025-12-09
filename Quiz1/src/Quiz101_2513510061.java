@@ -9,17 +9,17 @@ public class Quiz101_2513510061 {
         }
 
         int factorial = 1;
-        String multiplyText = "";
+        String multiply_text = "";
 
         for ( int i = number; i >= 1; i-- ) {
             factorial *= i;
 
-            multiplyText += i;
+            multiply_text += i;
             if (i > 1) {
-                multiplyText += " * ";
+                multiply_text += " x ";
             }
         }
 
-        JOptionPane.showMessageDialog(null, multiplyText + " = " + factorial);
+        JOptionPane.showMessageDialog(null, multiply_text + " = " + factorial);
     }
 }
