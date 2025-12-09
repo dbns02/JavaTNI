@@ -1,5 +1,4 @@
 import javax.swing.*;
-import java.text.DecimalFormat;
 
 public class Lab309 {
     public static void main(String[] args) {
@@ -7,17 +6,9 @@ public class Lab309 {
         int menu = JOptionPane.showConfirmDialog(null, "Do you want to order from the menu?", "Menu",
                 JOptionPane.YES_NO_OPTION);
 
-        double net = 0.07;
-
         if (menu == JOptionPane.YES_OPTION) {
             while (true) {
-                int number = Integer.parseInt(JOptionPane.showInputDialog("""
-                        Yakitori Menu
-                        [1] Chicken Wing 99 B.
-                        [2] Pork with Leek 89 B.
-                        [3] Beef Tongue 109 B.
-                        [0] Exit and Calculate
-                        Enter menu number:"""));
+                int number = Integer.parseInt(JOptionPane.showInputDialog("Yakitori Menu\n" + "[1] Chicken Wing 99 B.\n" + "[2] Pork with Leek 89 B.\n" + "[3] Beef Tongue 109 B.\n" + "[0] Exit and Calculate\n" + "Enter menu number:"));
 
                 if (number == 0) break;
 
@@ -33,23 +24,16 @@ public class Lab309 {
                         price = 109;
                         break;
                     default:
-                        JOptionPane.showInputDialog(null, """
-                                Yakitori Menu
-                                [1] Chicken Wing 99 B.
-                                [2] Pork with Leek 89 B.
-                                [3] Beef Tongue 109 B.
-                                [0] Exit and Calculate
-                                Enter menu number:""");
+                        number = Integer.parseInt(JOptionPane.showInputDialog(null, "Yakitori Menu\n" + "[1] Chicken Wing 99 B.\n" + "[2] Pork with Leek 89 B.\n" + "[3] Beef Tongue 109 B.\n" + "[0] Exit and Calculate\n" + "Enter menu number:"));
                 }
                 sum += price;
             }
             JOptionPane.showConfirmDialog(null, "Do you want to order from the menu?", "Menu", JOptionPane.YES_NO_OPTION);
 
-            double total_price = sum + (sum * net);
-            
-            DecimalFormat frm = new DecimalFormat("#,###.00");
-
-            JOptionPane.showMessageDialog(null, "Total price is " + frm.format(total_price) + " Baht.");
+            if (menu == JOptionPane.YES_OPTION) {
+                JOptionPane.showMessageDialog(null, "Total price is " + sum + " Baht.");
+            } else {
+            }
         }
     }
 }
