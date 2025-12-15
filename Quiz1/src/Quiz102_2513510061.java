@@ -34,7 +34,7 @@ public class Quiz102_2513510061 {
             }
         }
         System.out.println();
-        
+
         int a = num1;
         int b = num2;
 
