@@ -16,7 +16,7 @@ public class Ex603 {
 
         System.out.println("List of membership:");
         for (String name : names) {
-            System.out.println((name);
+            System.out.println((name));
         }
     }
 }
