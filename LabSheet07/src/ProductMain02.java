@@ -36,6 +36,7 @@ public class ProductMain02 {
                 System.out.println("Sold " + buy + " items");
                 System.out.println("-------------------------------------");
                 product1.showInfo();
+                break;
             } else if (amount == 2) {
                 System.out.println("Name : Notebooks");
                 System.out.println("Price : " + product2.price + " Baht/Item");
@@ -48,6 +49,7 @@ public class ProductMain02 {
                 System.out.println("Sold " + buy + " items");
                 System.out.println("-------------------------------------");
                 product2.showInfo();
+                break;
             } else {
                 System.out.print("Invalid number! Enter a number, again: ");
             }

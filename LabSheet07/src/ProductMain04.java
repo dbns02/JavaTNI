@@ -19,10 +19,10 @@ public class ProductMain04 {
 
         System.out.println("welcome to MINI SHOP!!");
         System.out.println("--------------------------------");
-        System.out.println("Press [1] to buy Pens (items=" + products[0].quantity + ")");
-        System.out.println("Press [2] to buy Pencils (items=" + products[1].quantity + ")");
-        System.out.println("Press [3] to buy Markers (items=" + products[2].quantity + ")");
-        System.out.println("Press [4] to buy Highlighters (items=" + products[3].quantity + ")");
+        System.out.println("Press [1] to buy Pens (items = " + products[0].quantity + ")");
+        System.out.println("Press [2] to buy Pencils (items = " + products[1].quantity + ")");
+        System.out.println("Press [3] to buy Markers (items = " + products[2].quantity + ")");
+        System.out.println("Press [4] to buy Highlighters (items = " + products[3].quantity + ")");
         System.out.println("--------------------------------");
 
         Scanner sc = new Scanner(System.in);
