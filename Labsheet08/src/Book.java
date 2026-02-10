@@ -9,7 +9,8 @@ public class Book {
         this.availableBook = totalBook;
     }
     Book(String title) {
-        this(title, 0);
+        this.title = title;
+        this.totalBook = 0;        //this(title, 0);
     }
     Book() {
         this("", 0);
@@ -21,8 +22,7 @@ public class Book {
         return this.totalBook;
     }
     int getAvailableBook() {
-        return this.availableBook;
-    }
+        return this.availableBook;    }
     void borrowBook() {
         if (this.availableBook > 0) {
             this.availableBook--;
