@@ -40,7 +40,7 @@ public class CoffeeShop {
 
         int espressoCount = 0;
         int frappuccinoCount = 0;
-        
+
         while (more) {
             System.out.println("Press 1 for ordering Espresso");
             System.out.println("Press 2 for ordering Frappuccino");
