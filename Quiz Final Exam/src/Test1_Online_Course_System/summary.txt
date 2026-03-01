@@ -1,0 +1,6 @@
+Test1_Online_Course_System.Course: Java
+Base price: 250.0
+Duration: 5 hours
+Total: 300.0
+
+Total payment: 300.0
